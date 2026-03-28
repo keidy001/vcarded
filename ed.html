@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Card</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+
+<body class="bg-gray-300 flex flex-col items-center gap-10 py-10">
+
+<!-- ================= RECTO ================= -->
+<div class="relative bg-orange-900 shadow-2xl overflow-hidden" style="width:1011px;height:638px;border-radius:20px;">
+
+    <!-- LEFT -->
+    <div class="absolute left-0 top-0 h-full w-[45%] bg-slate-900 text-white p-10 flex flex-col justify-between">
+
+        <!-- LOGO + NOM -->
+        <div class="flex items-center gap-4">
+            <img src="matat.png" class="w-20 h-20 object-contain" alt="logo">
+            <h1 class="text-3xl font-bold leading-tight">
+                ETS DIAFOUNOU
+            </h1>
+        </div>
+
+        <!-- QR -->
+        <div class="flex justify-center">
+            <div id="qrcode"></div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-orange-500 text-xl font-semibold text-center">
+            Scannez ou utilisez via NFC
+        </div>
+    </div>
+
+    <!-- SHAPES -->
+    <div class="absolute right-0 top-0 h-full w-[400px] bg-orange-500 rounded-r-[200px]"></div>
+    <div class="absolute right-[5%] top-0 h-full w-[400px] bg-orange-400 rounded-r-[200px]"></div>
+    <div class="absolute right-[10%] top-0 h-full w-[500px] bg-orange-300 rounded-r-[200px]"></div>
+
+    <!-- RIGHT -->
+    <div class="absolute right-0 top-0 h-full w-[55%] px-5 flex flex-col justify-center">
+
+        <h2 class="text-5xl font-bold text-slate-800">
+            Kante Mahamadou
+        </h2>
+
+        <div class="text-3xl text-gray-900 mt-4 mb-6">
+            Entrepreneur
+        </div>
+
+        <div class="text-2xl text-gray-900 space-y-3">
+            <p>📧 kantemahamadou2017@yahoo.com</p>
+            <!-- <p>🌐 www.matatrading.com</p> -->
+            <p>📍 Bamako - Mali</p>
+            <p>📞 +223 77 81 74 10</p>
+            <p>📞 +223 74 03 00 25</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= VERSO ================= -->
+<div class="relative shadow-2xl overflow-hidden bg-[#0B1A2F]" style="width:1011px;height:638px;border-radius:20px;">
+
+    <!-- DECOR -->
+    <div class="absolute -right-20 -top-20 w-[400px] h-[400px] bg-orange-500 opacity-20 rounded-full"></div>
+    <div class="absolute -right-10 top-20 w-[300px] h-[300px] bg-orange-400 opacity-20 rounded-full"></div>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 p-12 h-full flex flex-col justify-between text-white">
+
+        <!-- TOP -->
+        <div class="text-center">
+            <img src="matat.png" class="w-40 mx-auto mb-4" />
+            <h1 class="text-5xl font-bold tracking-wide">
+                ETS DIAFOUNOU
+            </h1>
+
+            <p class="text-gray-300 mt-3 text-4xl">
+                Votre partenaire de confiance 
+            </p>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="grid grid-cols-2 gap-4 text-3xl">
+
+            <div class="flex items-center gap-2">
+                <span class="text-orange-400">✔</span>
+                Commerce général
+            </div>
+
+            <div class="flex items-center gap-2">
+                <span class="text-orange-400">✔</span>
+                Transfert d'argent
+            </div>
+
+            <div class="flex items-center gap-2">
+                <span class="text-orange-400">✔</span>
+                Prestation de service
+            </div>
+
+            <div class="flex items-center gap-2">
+                <span class="text-orange-400">✔</span>
+                Conseil & accompagnement
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="text-center text-orange-400 text-2xl font-medium">
+            <!-- Scannez pour découvrir nos services -->
+        </div>
+
+    </div>
+</div>
+
+<script>
+new QRCode(document.getElementById("qrcode"), {
+    text: "https://tonsite.com/profile",
+    width: 160,
+    height: 160
+});
+</script>
+
+</body>
+</html>
